@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Count The Smile Faces">
+    <meta name="author" content="Laura Hernandez">
+    <link rel="shortcut icon" href="public/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="public/img/favicon.ico" type="image/x-icon">
+    <title>Molecule_Creator_PRO</title>
+    <link href="public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/vendor/sweetalert/sweetalert.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 54px;
+        }
+
+        @media (min-width: 992px) {
+            body {
+                padding-top: 56px;
+            }
+        }
+
+        #tasks {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Molecule_Creator_PRO</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href= "https://github.com/laurahemancera" target="_blank" rel="noopener noreferrer">Github</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://laurahemancera.github.io/Bootstrapcorregidofinal/ResponsiveBiografiaLau/vendor/" target="_blank" rel="noopener noreferrer">Laura Hernández</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-lg-12 text-center">
+                <div class="form-group">
+                        <img src="Fases.jpg" width="400"/>
+                        <br> 
+                        <h1> Ingresa el nombre de tu Molecula :</h1>
+
+                    </div>
+                </div>
+                
+                <div class="col-lg-12 text-center">
+                    <div class="form-group">
+                        <input type="text" class="form-control" style="margin-top: 10px;" id="task" placeholder="Nombre">
+                    <button type="button" class="form-control btn btn-danger" style="margin-top: 10px;" id="saveTask">Guardar Nombre</button> 
+                     </div>                    
+                </div>
+            </div>
+        </div>
+  
+        <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center" style="margin-top: 10px;" id="tasks"></div>                            
+                </div> 
+            </div>
+                    <hr>
+
+    <div class="container">
+         <div class="row mt-3">
+            <div class="col-lg-12 text-center">
+                <div class="form-group">
+                        <h1>Buscar Simbolo del Elemento:</h1>
+                <input type="text" class="form-control" style="margin-top: 10px;" placeholder="Digita el nombre del elemento" id="elementoo"/>
+                <button id="buscaElemento">Buscar</button>  
+                <div id="busqueda"></div>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-lg-12 text-center">
+            <div class="form-group">
+                            <h1>Validar Símbolo:</h1>
+                            <input type="text" class="form-control" id="face" placeholder="Símbolo">
+                        </div>
+                    </div>
+                    <div class="col-lg-12 text-center">
+                        <div class="form-group">
+                            <button type="button" class="form-control btn btn-danger" id="saveFace">Guardar Símbolo</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+<div class="container">
+<hr>
+<div class="row">
+<div class="col-lg-12" style="margin-top: 10px;" id="faces"></div>
+</div>
+                <hr>
+
+                <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center" style="margin-top: 10px; font-size: 1.5em; font-weight: bold;" id="numFaces">
+                        Número de átomos en fase gaseosa encontrados en tu molecula : 0
+                    </div>
+                    
+                <div class="container">
+             
+                    <div class="row">
+                        <div class="col-lg-12 text-center" style="margin-top: 10px; font-size: 1.5em; font-weight: bold;" id="numLiq">
+                         Número de átomos en fase liquida encontrados en tu molecula : 0
+                        </div>
+                        
+                <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 text-center" style="margin-top: 10px; font-size: 1.5em; font-weight: bold;" id="numSol">
+                        Número de átomos en fase solida encontrados en tu molecula : 0
+                            </div>
+                </div>
+                
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <div class="container">
+         <div class="row mt-3">
+                    <div class="col-lg-12 text-center">
+                        <div class="form-group">
+                            <h1> Que  deseas calcular? </h1>
+                    
+            <br/>
+<CENTER><button id= "peso"> Electronegatividad Molecular</button>
+<button id= "formula"> Fórmula Molecular </button></CENTER>
+
+<br/>
+<CENTER> <div id ="respuesta"> respuesta</div></CENTER>
+
+</p>
+<script src="public/script.js"></script>
+<script
+                src="https://code.jquery.com/jquery-2.2.4.min.js"
+                integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+                crossorigin="anonymous"></script>
+        
+          
+
+        </div>
+        <hr>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+               
+            <span class="text-muted">Desarrollado por Laura Hernández -
+                <a href="https://twitter.com/ostjh" target="_blank" rel="noopener noreferrer">@hernandezmlau</a>
+            </span> 
+        </div>
+    </div>
+</div>
+    </footer>
+    <script src="public/vendor/sweetalert/sweetalert.min.js"></script>
+    <script src="public/vendor/jquery/jquery.min.js"></script>
+    <script src="public/vendor/popper/popper.min.js"></script>
+    <script src="public/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="public/script.js"></script>
+</body>
+
+</html>
